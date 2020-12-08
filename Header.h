@@ -46,7 +46,7 @@ public:
 	WeatherCalendar();
 	~WeatherCalendar();
 	void getLastWeekWeather();
-	void AddWeather(Weather object)
+	void addWeather(Weather object)
 	{
 		Weather* obj = new Weather[11];
 		
@@ -63,5 +63,5 @@ public:
 	Weather* getWeatherArray();
 
 	friend double findMaxTemperature(Weather* arr, int day);
-	friend void SortMassive(Weather* arr, int size);
+	friend void sortMassive(Weather* arr, int size);
 };
