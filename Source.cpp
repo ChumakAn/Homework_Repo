@@ -4,7 +4,7 @@ double findMaxTemperature(Weather* arr, int day);
 
 string isLvivWeather(double humidity, type WeatherType);
 
-void SortMassive(Weather* arr, int size);
+void sortMassive(Weather* arr, int size);
 
 int main()
 {
@@ -38,7 +38,7 @@ int main()
 	WeatherType = (type)a;
 	cout << isLvivWeather(humidity, WeatherType);
 	cout << endl;
-	SortMassive(object.getWeatherArray(), 10);
+	sortMassive(object.getWeatherArray(), 10);
 	
 	return 0;
 
@@ -60,16 +60,16 @@ double findMaxTemperature(Weather* arr, int day)
 }
 string isLvivWeather(double humidity, type WeatherType)
 {
-	string m;
+	string output;
 	if (humidity > 80 && WeatherType == RAINY)
 	{
-		 m = "Typical day in Lviv";
+		 output = "Typical day in Lviv";
 	}
 	else
-		m = "You`re lucky , man" ;
-	return m;
+		output = "You`re lucky , man" ;
+	return output;
 }
- void SortMassive(Weather* arr, int size)
+ void sortMassive(Weather* arr, int size)
 {
 	for (int i = 0; i < size; i++)
 	{
